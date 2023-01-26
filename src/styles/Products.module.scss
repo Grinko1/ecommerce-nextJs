@@ -1,0 +1,25 @@
+.products{
+    .container{
+        width: 80%;
+        margin: auto;
+        .img{
+            max-width: 500px;
+        }
+        .productsList{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
+@media(max-width:440px){
+    .products{
+        .container{
+            width: 100% !important;
+            .img{
+                max-width: 80%;
+            }
+        }
+    }
+}

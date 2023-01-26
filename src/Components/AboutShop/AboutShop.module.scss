@@ -1,0 +1,103 @@
+.shop{
+    width: 100%;
+    margin: auto;
+   
+    .container{
+        width: 80%;
+        margin: auto;
+        position: relative;
+    }
+    .header{
+        font-size: 54px;
+        font-weight: 400;
+        font-family: var(--font-cursive);
+        position: absolute;
+        top: 109px;
+        left: 245px;
+
+    }
+    .shopImg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       margin-top: 60px;
+      .shop_img{
+        width: 560px;
+        height: 640px;
+      }  
+    }
+    .desc{
+        position: absolute;
+        right: 185px;
+        top: 306px;
+        width: 230px;
+    }
+    .address{
+        position: absolute;
+        bottom: 0px;
+        left: 195px;
+    }
+    .mapImg{
+        width: 274px;
+        height: 245px;
+        position: absolute;
+        bottom: -77px;
+        right: 206px;
+    }
+   
+}
+.getdirection{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 45px;
+   position: relative;
+
+}
+@media(max-width:460px){
+    .shop{
+        width: 100%;     
+        margin: auto;
+        position: relative;
+        .container{
+            width: 100%;
+            margin: auto;
+            position: relative;
+        }
+        .header{
+            font-size: 40px;
+            top: 20px;
+            left: 0;
+    
+        }
+        .shopImg{
+            justify-content: flex-end;
+
+          .shop_img{
+            width: 166px;
+            height: 300px;
+            object-fit: cover;
+          }  
+        }
+        .desc{
+            top: 130px;
+            width: 160px;
+            left: 5px;
+        }
+        .address{
+
+            bottom: -70px;
+            left: 0;
+        }
+        .mapImg{
+            width: 110px;
+            height: 110px;
+            position: absolute;
+            right: 30px;
+        }
+       
+    }
+    .getdirection{
+     margin-top: 115px;
+    }
+}

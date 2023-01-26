@@ -1,0 +1,222 @@
+.product{
+    .container{
+        width: 80%;
+        margin: auto;
+
+        .productBlock{
+            display: flex;
+            margin-top: 30px;
+            .slider{
+                flex: 1;
+                .bigImg{
+                    width: 465px;
+                }
+            }
+            .desc{
+                flex: 1;
+                .product-name{
+
+                }
+                .price{
+                    font-size: 42px;
+                    font-weight: 700;
+                    color: var(--pink);
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                }
+                .sizes{
+                    .sizeBlock{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 10px;
+                        .sizeItem{
+                            width: 82px;
+                            text-align: center;
+                            cursor: pointer;
+                            border-top: 1px solid black;
+                            border-bottom: 1px solid black;
+                            padding: 5px 0;
+                        }
+                        .pinkColor{
+                            border-top: 1px solid var(--pink);
+                            border-bottom: 1px solid var(--pink);
+                            color: var(--pink);
+                        }
+                    }
+                }
+                .productBtns{
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 20px;
+                    text-transform: uppercase;
+                    .btnTransparent{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btnBg{
+                            width: 220px;
+                            position: relative;
+                        }
+                        .btnName{
+                            position: absolute;
+                            font-family: var(--font-cursive);
+                            font-size: 20px;
+                            line-height: 27px;
+                            cursor: pointer;
+                           
+                        }
+                        .white{
+                            color:#ffff;
+                        }
+                        .pink{
+                            color: var(--pink) ;
+                        }
+                        
+                    }
+                }
+                .productText{
+                    margin-top: 30px;
+                    font-size: 14px;
+                    .dots{
+                        
+                    }
+                    .view{
+                        display: inline;
+                    }
+                    .hidden{
+                        display: none;
+                    }
+                    .showMore{
+                        border: none;
+                        background: transparent;
+                        color: var(--pink);
+                        cursor: pointer;
+                    }
+                }
+                .composition{
+                    display: flex;
+                    margin-top: 30px;
+                    .left{
+                        flex: 1;
+                        .left_p{
+                            font-size: 12px;
+                            padding: 0;
+                        }
+                        .modelSize{
+                            display: flex;
+                            align-items: center;
+                            margin-top: 10px;
+                            .height{
+                                font-size: 14px;
+                                padding: 0;
+                                transform: rotate(-90deg);
+                            }
+                            .icon{
+                                width: 80px;
+                                height: 120px;
+                            }
+                            .values{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                height: 120px;  
+                            }
+                            .value{
+                                span{
+                                    font-size: 14px;
+                                }
+                                font-size: 8px;
+                                width: 55px;
+                                margin-left: 10px;
+                            }
+                            
+                        }
+                    }
+                    .right{
+                        flex: 1;
+                    }
+                   
+
+                }
+                .tableSize{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 30px;
+                   .sizeBtn{
+                        background: transparent;
+                        border: 1px solid var(--pink);
+                        color: var(--pink);
+                        font-family: var(--font-cursive);
+                        font-size: 20px;
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .suggestion{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+@media (max-width:1000px){
+    .product{
+        .container{
+            .productBlock{
+                .slider{
+                    .bigImg{
+                        width: 300px;
+                    }
+                }
+                .desc{
+                    width: 50%;
+                    .productBtns{
+                        flex-direction: column;
+                    }
+                    .productText{
+                        .hidden{
+                            display: none;
+                        }
+                    }
+                    .composition{
+                        display: flex;   
+    
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:600px) {
+    .product{
+        .container{
+            .productBlock{
+                flex-direction: column;
+                .desc{
+                    width: 100%;
+                    .sizes{
+                        .sizeBlock{
+                            .sizeItem{
+                                width: 50px;
+                            }
+                        }
+                    }
+                    .productBtns{
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+    .hideBenefits{
+        display: none;
+    }
+    .suggestion{
+      flex-wrap: wrap;
+
+    }
+}

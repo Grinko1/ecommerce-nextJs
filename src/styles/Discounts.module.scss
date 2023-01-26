@@ -1,0 +1,87 @@
+.discount{
+    .container{
+        width: 80%;
+        margin: auto;
+        .headerIcon{
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        .programms{
+            display: flex;
+                flex-direction: column;
+                width: 80%;
+                gap: 20px;
+                margin: 20px auto 50px auto;
+            .programm{
+                border: 1px solid var(--pink);
+                display: flex;
+                .left{
+                    width: 50%;
+                    text-align: center;
+                    img{
+                        width: 180px;
+                        margin-top: 20px;
+                    }
+                    .pinkTag{
+                        color: var(--pink);
+                        font-size: 42px;
+                        margin-block-start: 0;
+                        margin-block-end:0;
+                    }
+                    .bigText{
+                        font-size: 25px;
+                    }
+                    .smallText{
+                        font-size: 14px;
+                    }
+                }
+                .right{
+                    text-align: start;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    .smallPinktext{
+                        color: var(--pink);
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:720px){
+    .discount{
+        .container{
+            width: 100%;
+        }
+    }
+}
+@media(max-width:550px){
+    .discount{
+        .container{
+            width: 100%;
+            margin: auto;
+            .headerIcon{
+                width: 100%;
+            }
+            .programms{
+                .programm{
+                    .left{
+                        img{
+                            width: 120px;
+                        }
+                        .pinkTag{
+                            display: none;
+                        }
+                        .bigText{
+                            font-size: 20px;
+                        }
+                    }
+                    .right{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

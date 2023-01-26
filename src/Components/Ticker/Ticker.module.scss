@@ -1,0 +1,42 @@
+.ticker{
+    margin-top: 89px;
+    background-color: var(--pink);
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+   
+  
+    .border{
+        color: var(--red);
+        border-top: 1px solid var(--red) ;
+        border-bottom: 1px solid var(--red) ;
+        display: flex;
+        align-items: center;
+        height: 60px;
+     
+   
+    }
+    .text{
+        color: var(--red);
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 600;       
+        white-space: nowrap;
+        padding-right: 50px;
+    animation: marquee 25s infinite linear;
+    }
+  
+}
+.text:after{
+    content: " ";
+}
+@keyframes marquee{
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+}

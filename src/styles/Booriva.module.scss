@@ -1,0 +1,48 @@
+.booriva{
+    margin-top: 30px;
+    .container{
+        width: 80%;
+        margin: auto;
+        .header{
+            max-width: 440px;
+           .headerImg{
+                width: 100%;
+            }
+        }
+        .boorivaGalery{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            .column{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+               
+                img{
+                    max-width: 370px;
+                }
+                .galeryP{
+                    max-width: 370px;
+                }
+                .tag{
+                    color: var(--red);
+                }
+            }
+            .higher{
+                position: relative;
+                bottom: 90px;
+            }
+
+        }
+    }
+}
+@media(max-width:460px){
+    .booriva{
+        .container{
+            .boorivaGalery{
+                flex-direction: column;
+            }
+        }
+    }
+}

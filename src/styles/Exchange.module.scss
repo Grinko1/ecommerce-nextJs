@@ -1,0 +1,72 @@
+.exchange{
+   .container{
+        width: 80%;
+        margin: auto;
+        .header{
+            max-width: 500px;
+            margin-bottom: 50px;
+        }
+        .exchangeDesc{
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+            
+            
+            .descItem{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 40px;
+                width: 50%;
+                margin-bottom: 40px;
+                img{
+                    width: 112px;
+                    object-fit: contain;
+                }
+               
+                .text{
+                max-width: 320px;
+                }
+            }
+            
+           
+           
+        }
+        .exchangeInst{
+            margin: auto;
+        }
+    }
+}
+@media (max-width:600px){
+    .exchange{
+       .container{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:500px){
+    .exchange{
+       .container{
+            width: 100%;
+            .header{
+                max-width: 80%;
+            }
+            .exchangeDesc{
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                .descItem{
+                    width: 100%;
+                    margin: 40px 10px ;
+                    gap: 10px;                   
+                    .text{
+                    max-width: 220px;
+                    word-break:normal;
+                    }
+                }   
+            }
+        }
+    }
+}

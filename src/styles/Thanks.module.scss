@@ -1,0 +1,51 @@
+.thanks{
+    background-color:  rgba(253, 163, 196, 0.55);
+    height: 100vh;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container{
+        box-sizing: border-box;
+        max-width: 600vw;
+        max-height: 80%;
+        background-color: white;
+        text-align: center;
+        padding: 100px;
+        position: relative;
+        .close{
+            width: 35px;
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            
+        }
+        img{
+            max-width: 400px;
+
+        }
+        .order{
+            font-size: 18px;
+            margin: 60px 0;
+            text-transform: uppercase;
+        }
+        .msg{
+            text-align: start;
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 50px;
+            span{
+                color: var(--red);
+            }
+        }
+    }
+}
+@media (max-width:1100px){
+    .thanks{
+        .container{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}

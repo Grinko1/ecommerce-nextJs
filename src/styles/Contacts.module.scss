@@ -1,0 +1,101 @@
+.contacts{
+   .container{
+        width: 80%;
+        margin: auto;
+        .main{
+            display: flex;
+            margin-bottom: 50px;
+           .left{
+                width: 40%;
+                position: relative;
+                .headerImg{
+                    max-width: 400px;
+                }
+                .contactsList{
+                    .item{
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        img{
+                            width: 20px;
+                        }
+                    }
+
+                }
+                .contactMap{
+                   .mapImg{
+                        width: 100%;
+                        height: 350px;
+                        border-radius: 24px;
+                        object-fit: cover;
+                        position: absolute;
+                        left: 35%;
+                    }
+                }
+                .getDirection{
+                    position: relative;
+                    top: 50%;
+
+                }
+            }
+            .right{
+                img{
+                    max-width: 100%;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+@media(max-width:1200px){
+    .contacts{
+       .container{
+            .main{
+                margin-bottom: 250px;
+               .left{
+                    .headerImg{
+                        max-width: 350px;
+                    }
+                    .contactMap{
+                       .mapImg{
+                            width: 100%;
+                            height: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:600px){
+    .contacts{
+       .container{
+            width: 100%;
+            .main{
+                margin-bottom: 250px;
+               .left{
+                    width: 100%;
+                    .headerImg{
+                        max-width: 350px;
+                    }
+                    .contactMap{
+                       .mapImg{
+                            width: 100%;
+                            height: 50%;
+                            left: 0;
+                    
+                        }
+                    }
+                    .getDirection{
+                        position: relative;
+                        top: 60%;
+    
+                    }
+                }
+                .right{
+                    display: none;
+                }
+            }
+        }
+    }
+}

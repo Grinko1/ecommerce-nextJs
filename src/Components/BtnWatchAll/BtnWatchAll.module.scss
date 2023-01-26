@@ -1,0 +1,32 @@
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+   
+    
+    .bg{
+       
+        position: relative;
+    }
+    .m{
+        width: 180px;
+    }
+    .l{
+        width: 240px;
+    }
+    .text{
+        position: absolute;
+        font-family: var(--font-cursive);
+        font-size: 20px;
+        line-height: 27px;
+        color: #FFFFFF;
+        cursor: pointer;
+
+    }
+    .disabled{
+       color: rgb(233, 229, 229);
+       cursor: not-allowed;
+    }
+    
+}

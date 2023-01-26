@@ -1,0 +1,30 @@
+.mobileMenu{
+    border-top: 1px solid var(--pink);
+    background-color: white;
+    height: 70px;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 999999;
+    .item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        img{
+            width: 35px;
+            height: 35px;
+        }
+        span{
+            font-size: 14px;
+        }
+    }
+  
+}
+.show{
+    display: none;
+}
+@media(max-width:600px){
+    .show{
+        display: flex;
+    }
+}

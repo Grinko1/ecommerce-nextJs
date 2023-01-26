@@ -1,0 +1,16 @@
+.favorite{
+   
+       
+    
+    .container{
+        width: 80%;
+        margin: auto;
+        .items{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+}

@@ -1,0 +1,168 @@
+.photomenu {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+  
+    .photo_big{
+        width: 563px;
+        height: 345px;
+    }
+    .photo_small{
+        width: 274px;
+        height: 296px;
+    }
+    .pinkName{
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+        color:white;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 38px;
+        bottom: 34px;
+        left: 20px;
+        a{
+            color: white;
+        }
+    
+       
+    }
+    .pinkName_bg{
+        position: absolute;
+
+    }
+
+     .tshirts{
+        width: 166px;
+         position: absolute;
+         padding: 5px;
+        bottom: 34px;
+        left: 20px;
+    }
+    .pants{
+       width: 105px;
+       height: 45px;
+       position: absolute;
+       bottom: 22px;
+       right: -136px;
+       transform: rotate(-13deg);
+    }
+    .rotatePants{
+        transform: rotate(-40deg);
+    }
+    .jackets{
+        width: 132px;
+        height: 45px;
+        position: absolute;
+        padding: 5px;
+        right: 35px;
+        top: -250px;
+    }
+    .dresses{
+        width: 162px;
+        height: 40px;
+        bottom: 63px;
+        left: -3px;
+        position: absolute;
+    }
+    .suits{
+        position: absolute;
+        width: 184px;
+        height: 45px;
+        bottom:-10px;
+        right: 45px;
+    }
+    .hoodie{
+        width: 134px;
+        height: 44px;
+        position: absolute;
+        bottom: 20px;
+        left: 63px;
+        transform: rotate(12deg);
+    }
+    .rotateHoodie{
+        transform: rotate(32deg);
+    }
+    .left{
+        display: grid;
+        grid-template-columns: 280px 280px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "photoBig photoBig "
+          "photoSmall photoSmall_1"; 
+
+    }
+    .right{
+        display: grid;
+        grid-template-columns: 280px 280px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "photoSmall photoSmall_1"
+          "photoBig photoBig "; 
+
+    }
+    .photoBig{
+        grid-area: photoBig;
+        position: relative;
+        
+    }
+    .photoSmall{
+      grid-area: photoSmall;
+      position: relative;
+ 
+  }
+  .photoSmall_1{
+      grid-area: photoSmall_1;
+      margin-left: 10px;
+      position: relative;
+  }
+}
+
+@media(max-width: 1150px) {
+
+    .photomenu {
+        flex-direction: column;
+    }
+}
+@media(max-width: 460px) {
+
+    .photomenu {
+        flex-direction: column;
+    
+      
+        .photo_big{
+            width: 370px;
+            height: 250px;
+            object-fit: contain;
+
+        }
+        .smallImg{
+            width: 180px;
+            object-fit: cover;
+        }
+
+        .pants{
+           right: -65px;
+        }
+        .suits{
+            width: 150px;
+            right: 20px;
+        }
+        .hoodie{
+            bottom: 41px;
+            left: 31px;
+        }
+        .left{
+            grid-template-columns: 180px 180px;
+        }
+        .right{
+            grid-template-columns: 180px 180px;
+    
+        }
+
+  
+    }
+}

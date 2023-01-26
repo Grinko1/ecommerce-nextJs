@@ -1,0 +1,53 @@
+.benefits{
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto 75px ;
+
+    .item{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .left{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img{
+                width: 85px;
+                object-fit: contain;
+            }
+        }
+        .right{
+            width: 215px;
+            .bolt_text{
+                font-size: 25px;
+                height: 62px;
+            }
+            .text{
+               font-weight: 300;
+            }
+
+        }
+    }
+}
+@media(max-width:610px){
+    .benefits{
+        max-width: 100%;
+        flex-direction: column;    
+        .item{
+           width: 50%;
+           margin: 10px auto;
+        }
+    }
+}
+@media(max-width:460px){
+    .benefits{
+        max-width: 100%;
+        flex-direction: column;    
+        .item{
+           width: 80%;
+           margin: 10px auto;
+        }
+    }
+}

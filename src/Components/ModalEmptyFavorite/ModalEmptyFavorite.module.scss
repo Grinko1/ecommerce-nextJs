@@ -1,0 +1,66 @@
+.favoriteModal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(253, 163, 196, 0.65);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+    .modalContent{
+        padding: 50px ;
+        background-color: white;
+        height: 400px;
+        width: 742px;
+        height: 600px;
+        position: relative;
+       .modalClose{
+           margin-bottom: 10%;
+       }
+        .closeIcon{
+            width: 46px;
+            height: 46px;
+            position: absolute;
+            right: 50px;
+            cursor: pointer;
+        }
+        .modalHeader{
+            
+            width: 80%;
+            margin: auto;
+            .canlikeImg{
+            width: 100%;
+            margin: auto;
+        }
+
+        }
+        .modal_main{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+            .icon{
+                width: 180px;
+                margin-top: 20px;
+            }
+            .text{
+                width: 300px;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
+        
+        
+    }
+   
+}
+.active{
+    opacity: 1;
+    pointer-events: all; 
+}

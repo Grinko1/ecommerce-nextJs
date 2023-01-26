@@ -1,0 +1,90 @@
+.headerMobile{
+    display: none;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 10px;
+    
+}
+.headerLeft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+.headerBlock{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.headerIcon{
+    width: 18px;
+    margin-right: 10px;
+    height: 21px;
+}
+.pink{
+    color: var(--pink)
+}
+.logoImg{
+    width: 160px;
+}
+.headerRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+   .headerBtns{
+       display: flex;
+       gap: 15px;
+       .cart{
+           position: relative;
+           cursor: pointer;
+           
+           span{
+               position: absolute;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background-color: var(--pink);
+               border-radius: 50%;
+               height: 13px;
+               width: 13px;
+               top: -6px;
+               right: 3px;
+               padding: 1px;
+           }
+       }
+   }
+}
+
+.mobileMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    .mobileMenuLogo{
+        flex: 1;
+        margin-left: 20px;
+    }
+    .mobileMenuRight{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        .end{
+            position: relative;
+            right: -25px;
+        }
+    }
+}
+@media (max-width: 600px){
+    .headerDesktop{
+        display: none;
+    }
+    .headerMobile{
+        display: block;
+    }
+}

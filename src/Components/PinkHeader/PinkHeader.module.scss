@@ -1,0 +1,35 @@
+.header{
+    position: relative;
+    max-width: 40%;
+}
+.headerPink{
+    font-family: var(--font-cursive);
+    color:var(--pink);
+    font-size: 54px;
+    margin-left: 80px;
+}
+.doble{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    position: absolute;
+    top: 9px;
+    left: 80px;
+    
+}
+.img{
+    width: 65px;
+    height: 15px;
+    position: absolute;
+    bottom: 9px;
+    right: 250px;
+   
+}
+@media(max-width: 460px) {
+    .headerPink{
+        margin-left: 20px;
+    }
+    .doble{
+        left: 20px;
+    }
+}

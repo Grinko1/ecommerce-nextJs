@@ -1,0 +1,35 @@
+.filter{
+    .filterHeader{
+    font-size: 20px;
+    margin: 20px 0;
+    }
+    .category{
+       .list{
+           padding: 0;
+           .categoryItem{
+               margin-bottom: 10px;
+           }
+           .choozen{
+               a{
+                  color: var(--pink); 
+               }
+               
+               font-weight: 700;
+           }
+       }
+    
+    }
+    .price{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .filter-price-item{
+            display: flex;
+            gap: 6px;
+        }
+
+        ////
+      
+        /////
+    }
+}

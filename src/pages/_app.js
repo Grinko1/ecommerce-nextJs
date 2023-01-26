@@ -1,5 +1,17 @@
+import { Layout } from '@/layout/Layout'
+import { wrapper } from '@/store/store';
 import '@/styles/globals.css'
+// import withRedux from "next-redux-wrapper";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+ function App({ Component, pageProps}) {
+  return(
+
+    <Layout>
+       <Component {...pageProps} />
+    </Layout>
+
+  )
 }
+export default wrapper.withRedux(App)
+// export default App

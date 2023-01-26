@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    margin-top: 10px;
+    .left{
+        width: 40%;
+    }
+    .right{
+        width: 60%;
+        .rightImg{
+            max-width: 800px;
+            object-fit: cover;
+        }
+    }
+}
+@media(max-width:950px){
+    .container{
+        .right{
+            .rightImg{
+                max-width: 100%;
+                object-fit: cover;
+                height: 100px;
+            }
+        }
+    }  
+}

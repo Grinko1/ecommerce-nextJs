@@ -1,0 +1,38 @@
+.items::-webkit-scrollbar{width: 3px;height: 5px; padding-right: 20px;}
+.items::-webkit-scrollbar-track-piece{background-color: var(--light-pink);}
+.items::-webkit-scrollbar-thumb:vertical{height: 5px;background-color: var(--pink); border-radius: 4px;}
+
+.items{
+    overflow-y: scroll;
+    width: 90%;
+    max-height: 500px;
+    padding-right: 20px;
+
+
+    .item{
+        display: flex;
+        margin-bottom: 10px;
+        .img{
+            width: 155px;
+            height: 180px;
+        }
+        .desc{
+            width: 320px;
+            p{
+                font-style: 14px;
+                margin-bottom: 30px;
+            }
+            .price{
+                color: var(--pink);
+                font-size: 16px;
+            }
+        }
+        .delete{
+            width: 14px;
+            height: 14px;
+            margin-left: 28px;
+            cursor: pointer;
+        }
+        
+    }
+}

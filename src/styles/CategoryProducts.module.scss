@@ -1,0 +1,27 @@
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 65px;
+
+    .main{
+        display: flex;
+        margin-top: 65px;
+        .filter{
+            flex: 1;
+        }
+        .products{
+            flex: 5;
+            display: flex;
+            justify-content: space-around;
+            gap: 26px;flex-wrap: wrap;
+        }
+    }
+    
+}
+@media(max-width:460px){
+    .container{
+        width: 100%;
+        
+    }
+}
