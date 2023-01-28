@@ -43,7 +43,7 @@ const CategoryProducts = () => {
   
   
     return (
-        <Layout>
+       
         <div className={style.container}>
             <CategoryHeader/>
             <div className={style.main}>
@@ -58,7 +58,7 @@ const CategoryProducts = () => {
             </div>
             <Instagram/>     
         </div>
-        </Layout>
+  
     );
 };
 

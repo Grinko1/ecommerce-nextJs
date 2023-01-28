@@ -7,7 +7,7 @@ import cn from 'classnames'
 
 
 const Filter = ({handleChangePrice}) => {
-  // const {pathname} = useLocation()
+
   const router = useRouter()
 
   

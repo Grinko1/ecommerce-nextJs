@@ -1,27 +1,27 @@
-// import { useDispatch } from 'react-redux';
-// import { addToFavorite, removeFromFavorite } from '../../store/favoriteSlice';
-// import { toggleFavorite } from '../../store/productsSlice';
+import { addToFavorite, removeFromFavorite } from '@/features/favoriteSlice';
+import { toggleFavorite } from '@/features/productsSlice';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
 import style from './CardItem.module.scss';
 
 const CardItem = ({img, name,price, id=1, isFavorite}) => {
 
  
   
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
   
 
     const handleAddFavorited = ()=> {
-        // dispatch(addToFavorite({id, img, name,price, isFavorite:true}))
-        // dispatch(toggleFavorite({id}))
+        dispatch(addToFavorite({id, img, name,price, isFavorite:true}))
+        dispatch(toggleFavorite({id}))
      
     
     }
 
     const handleDeleteFavorite = () => {
-        // dispatch(removeFromFavorite({id,  img, name,price,  isFavorite:false}))
-        // dispatch(toggleFavorite({id}))
+        dispatch(removeFromFavorite({id,  img, name,price,  isFavorite:false}))
+        dispatch(toggleFavorite({id}))
  
          
     }

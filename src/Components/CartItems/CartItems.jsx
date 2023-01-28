@@ -1,23 +1,21 @@
-import { newProducts } from 'data/new';
+import { cartTotal, removeFromCart } from '@/features/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
-// import { cartTotal, removeFromCart } from '../../store/cartSlice';
 import style from './CartItem.module.scss';
 
 const CartItems = () => {
 
-    // const {cartItems }= useSelector(state => state.cartItems)
+    const cartItems = useSelector(state => state.cartItems.cartItems)
  
-
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const handleDelete = (id,size) => {
-        // dispatch(removeFromCart({id, size}))
-        // dispatch(cartTotal())
+        dispatch(removeFromCart({id, size}))
+        dispatch(cartTotal())
     }
     return (
         <div className={style.items}>
             {
-                newProducts.map((i) => (
+                cartItems.map((i) => (
                     <div className={style.item} key={i.id}>
             <img className={style.img} src={i.img} alt=""/>
             <div className={style.desc}>

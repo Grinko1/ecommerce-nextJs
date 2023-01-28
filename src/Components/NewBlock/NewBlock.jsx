@@ -1,6 +1,6 @@
 
-import { newProducts } from 'data/new';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 import BtnWatchAll from '../BtnWatchAll/BtnWatchAll';
 import CardItem from '../CardItem/CardItem';
 import PinkHeader from '../PinkHeader/PinkHeader';
@@ -8,7 +8,7 @@ import  style from './NewBlock.module.scss';
 
 
 const NewBlock = () => {
-    // const newProducts = useSelector(state => state.products.new)
+    const newProducts = useSelector(state => state.products.new)
  
    
     return (

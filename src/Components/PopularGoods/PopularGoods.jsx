@@ -1,13 +1,12 @@
-
-import { products } from 'data/products';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 import BtnWatchAll from '../BtnWatchAll/BtnWatchAll';
 import CardItem from '../CardItem/CardItem';
 
 import style from './PopularGoods.module.scss';
 
 const PopularGoods = () => {
-    // const {products} = useSelector(state => state.products)
+    const {products} = useSelector(state => state.products)
     return (
         <>
         <div className={style.popular}>

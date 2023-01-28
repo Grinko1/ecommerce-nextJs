@@ -1,10 +1,13 @@
 import CardItem from '@/Components/CardItem/CardItem';
 import Instagram from '@/Components/InstagramBlock/Instagram';
 import PinkHeader from '@/Components/PinkHeader/PinkHeader';
-import { products } from 'data/products';
+
+import { useSelector } from 'react-redux';
 import style from '../styles/New.module.scss';
 
 const New = () => {
+  const {products} = useSelector(state => state.products)
+ 
   return (
     <div className={style.products}>
       <div className={style.container}>

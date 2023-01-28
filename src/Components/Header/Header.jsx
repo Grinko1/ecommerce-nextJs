@@ -7,14 +7,15 @@ import NavMenu from '../NavMenu/NavMenu';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import MobileHeader from './MobileHeader';
 import InputSearch from '../InputSerch/InputSearch';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
 
         const [isOpenSearch, setIsOpenSearch] = useState(false)
         const [activeMenu, setActiveMenu] = useState(false)
        
-        // const {cartItems} = useSelector(state => state.cartItems)
-        // const {favoriteItems} = useSelector(state => state.favoriteItems)
+        const {cartItems} = useSelector(state => state.cartItems)
+        const {favoriteItems} = useSelector(state => state.favoriteItems)
        
        
        
@@ -56,12 +57,12 @@ const Header = () => {
                          <div className={style.headerBtns}>
                          <div className={style.cart}>
                              <Link href='/favorite'>
-                             <span>2</span>
+                             <span>{favoriteItems.length}</span>
                              <img src="/icons/favorite.png" alt="" className={style.headerIcon}/>
                              </Link>
                              </div>
                           <div className={style.cart}>
-                             <span>3</span>
+                             <span>{cartItems.length}</span>
                              <img src="/icons/bag.png" alt="" className={style.headerIcon} onClick={() => setActiveMenu(!activeMenu)} />
                            </div>
                     </div>

@@ -3,11 +3,12 @@ import cn from 'classnames'
 import Link from 'next/link';
 import BtnWatchAll from '../BtnWatchAll/BtnWatchAll';
 import CartItem from '../CartItems/CartItems';
+import { useSelector } from 'react-redux';
 
 const PullOutCart = ({active, setActiveMenu }) => {
 
-//   const {cartItems, cartTotalAmount} = useSelector(state=>state.cartItems)
-const cart = 2
+  const {cartItems, cartTotalAmount} = useSelector(state=>state.cartItems)
+console.log(cartTotalAmount);
 
     
     return (
@@ -22,7 +23,7 @@ const cart = 2
             <h1>Корзина</h1>
           </div>
           {
-            cart == 0 ?
+            cartItems.length == 0 ?
             <>
             <div className={style.emptyCart}>
               <img src="/icons/emptycart.png" alt=""/>
@@ -40,7 +41,7 @@ const cart = 2
             <CartItem/>
    
               <div className={style.cartTotal}>
-              Сумма заказа: . . . . . . 5555 &#8381;
+              Сумма заказа: . . . . . . {cartTotalAmount} &#8381;
                 </div>
           <Link href='/order' onClick={() => setActiveMenu(false)}  >
               <BtnWatchAll img={'/icons/watch-all.png'} text={'Оформить заказ'} size={'l'}/>

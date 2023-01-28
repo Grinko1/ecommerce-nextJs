@@ -1,15 +1,13 @@
-
 import CardItem from '@/Components/CardItem/CardItem';
 import Instagram from '@/Components/InstagramBlock/Instagram';
-import { Layout } from '@/layout/Layout';
-import { products } from 'data/products';
+import { useSelector } from 'react-redux';
 import style from '../../styles/Products.module.scss';
 
 const ProductsAll = () => {
-    // const {products} = useSelector(state=>state.products)
+    const {products} = useSelector(state=>state.products)
 
     return (
-        <Layout>
+    
         <div className={style.products}>
             <div className={style.container}>
                 <img className={style.img} src="/icons/all-products.png" alt=""/>
@@ -25,7 +23,7 @@ const ProductsAll = () => {
             </div>
             
         </div>
-        </Layout>
+  
     );
 };
 

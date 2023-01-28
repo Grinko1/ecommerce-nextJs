@@ -3,20 +3,17 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import PinkHeader from '@/Components/PinkHeader/PinkHeader';
 import CardItem from '@/Components/CardItem/CardItem';
-import { newProducts } from 'data/new';
 import Instagram from '@/Components/InstagramBlock/Instagram';
-import { Layout } from '@/layout/Layout';
 import { products } from 'data/products';
 import cn from 'classnames'
 import SizeTable from '@/Components/SizeTable/SizeTable';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, cartTotal } from '@/features/cartSlice';
 
-// import { useDispatch, useSelector } from 'react-redux';
-// import { addToCart, cartTotal } from '../../store/cartSlice';
-// import { useNavigate, useParams } from 'react-router';
-// import { products } from '../../data/products';
+
 
 const ProductDetail = () => {
-    // const newProducts = useSelector(state => state.products.new)
+    const newProducts = useSelector(state => state.products.new)
     const [product, setProduct] = useState({})
     const [showDots, setShowDots] = useState(true)
     const [showText, setText] = useState(false)
@@ -40,17 +37,16 @@ const ProductDetail = () => {
             setProduct(products.find(i => i.id == id))      
         } ,[id])
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const addProductToCart = () => {
-        // dispatch(addToCart({...product, id:new Date().toISOString()}))
-        // dispatch(cartTotal())
+        dispatch(addToCart({...product, id:new Date().toISOString()}))
+        dispatch(cartTotal())
     }
     const fastOrder = () => {
-        // dispatch(addToCart({...product, id:new Date().toISOString()}))
-        // dispatch(cartTotal())
-        // navigate('/order')
-      
+        dispatch(addToCart({...product, id:new Date().toISOString()}))
+        dispatch(cartTotal())
+        router.push('/order')      
     }
 
     useEffect(() => {
@@ -67,7 +63,7 @@ const ProductDetail = () => {
 
  
     return (
-        <Layout>
+     
         <div className={style.product}>
             {
                 openTable ? 
@@ -198,7 +194,7 @@ const ProductDetail = () => {
            
             
         </div>
-        </Layout>
+ 
     );
 };
 

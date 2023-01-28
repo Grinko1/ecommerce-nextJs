@@ -1,6 +1,8 @@
+import { setSearch } from '@/features/productsSlice';
 import { redirect } from 'next/dist/server/api-utils';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 // import { useDispatch } from 'react-redux';
 // import { useNavigate } from 'react-router';
 // import { setSearch } from '../../store/productsSlice';
@@ -12,7 +14,7 @@ const InputSearch = ({setIsOpenSearch}) => {
   const [searchStr, setSearchStr] = useState('')
  const router = useRouter()
 
-// const dispatch = useDispatch()
+const dispatch = useDispatch()
 
   useEffect(() => {
     if(searchStr.length > 1){
@@ -23,13 +25,13 @@ const InputSearch = ({setIsOpenSearch}) => {
   
   const handelSearch = (e) => {
     setSearchStr(e.target.value)
-    // dispatch(setSearch(searchStr))
+    dispatch(setSearch(searchStr))
 
   }
   const handleCloseSearch = () => {
     setSearchStr('')
     setIsOpenSearch(false)
-    // navigate('/')
+    router.push('/')
   }
   
     return (
